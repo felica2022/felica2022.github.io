@@ -28,6 +28,19 @@ background-image: linear-gradient(rgba(0 0 0 / 0) 70%, rgba(255, 255, 0, 0.69) 7
 width: -moz-fit-contnet;/* firefox用 */
 }
 
+p{
+font-size: 22px;
+width: -moz-fit-contnet;/* firefox用 */
+width: fit-content;
+margin: 30px auto;
+line-height: 1;
+}
+
+p>a{
+color: white;
+}
+
+
 .main-visual{
 width: 100%;
 height: 100vh;
