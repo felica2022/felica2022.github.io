@@ -458,7 +458,15 @@ body {
 
 h1 {
   text-align: center;
-  padding: 30px 0;
+  font-size: 40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, orange);
+  width: -moz-fit-contnet;
+  /* firefox用 */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 100px auto 50px;
+  line-height: 1;
 }
 
 .col-wrapper {
