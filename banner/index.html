@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バナー</title>
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<h1>バナー</h1>
+<div class="col-wrapper">
+
+<div class="col-box">
+<a href="img/Felica_Tour_672x560_0407.jpg" data-lightbox="photo"><img src="img/Felica_Tour_672x560_0407.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/Felica_Tour_640x100_0407.jpg" data-lightbox="photo"><img src="img/Felica_Tour_640x100_0407.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/Paul_and_Joe_672x560.jpg" data-lightbox="photo"><img src="img/Paul_and_Joe_672x560.jpg" alt=""></a>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+
+<div class="col-box">
+<a href="img/Paul_and_Joe_640x100.jpg" data-lightbox="photo"><img src="img/Paul_and_Joe_640x100.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/iLumine_672x560(336x280)_0403.jpg" data-lightbox="photo"><img src="img/iLumine_672x560(336x280)_0403.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/iLumine_320x50.jpg" data-lightbox="photo"><img src="img/iLumine_320x50.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+
+<div class="col-box">
+<a href="img/felica_TA_672x560.jpg" data-lightbox="photo"><img src="img/felica_TA_672x560.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/felica_TA_640x100.jpg" data-lightbox="photo"><img src="img/felica_TA_640x100.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/672x560.jpg" data-lightbox="photo"><img src="img/672x560.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/640x100.jpg" data-lightbox="photo"><img src="img/640x100.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+<div class="col-box">
+<a href="img/usen_0331.jpg" data-lightbox="photo"><img src="img/usen_0331.jpg" alt=""></a>
+<h2>Lorem, ipsum dolor.</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, dicta.</p>
+</div><!-- /.col-box -->
+
+</div><!-- /.col-wrapper -->
+
+<div class="button02">
+<a href="#" id="more"></a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/lightbox.js"></script>
+
+<script>
+$(function(){
+$('#more').on('click',function(){
+$('.col-box:nth-of-type(n+5)').fadeToggle(200);
+$(this).toggleClass('close');
+return false;
+});
+});
+</script>
+    
+</body>
+</html>
