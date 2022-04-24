@@ -1,0 +1,160 @@
+@use "_reset.scss";
+@use "_lightbox.scss";
+
+//ブレイクポイントの設定
+$l-point: 959px;
+$m-point: 765px;
+$s-point: 420px;
+//mixinの設定
+@mixin size-l {
+ @media (max-width:$l-point){
+ @content;
+ }
+}
+@mixin size-m {
+ @media (max-width:$m-point){
+ @content;
+ }
+}
+@mixin size-s {
+ @media (max-width:$s-point){
+ @content;
+}
+}
+
+body{
+font-family: 'Oswald', sans-serif;
+background-color: bisque;
+}
+
+h1{
+text-align: center;
+padding: 30px 0;
+}
+.col-wrapper{
+width: 90%;
+margin: 0 auto 50px;
+columns: 4;
+@include size-l{
+columns: 3;
+}
+@include size-m{
+columns: 2;
+}
+@include size-s{
+columns: 1;
+}
+column-gap: 20px;
+}
+.col-box{
+break-inside: avoid;
+background-color: #FFF;
+padding: 10px;
+margin-bottom: 20px;
+border-radius: 5%;
+@include size-s{
+&:nth-of-type(n+5){
+display: none;
+}
+}
+
+img{
+border-radius: 5%;
+}
+h2{
+margin: 10px 0 2px;
+}
+
+/* snippet見出し部分 */
+h1:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  position: absolute;
+  font-size: 15px;
+  left: -40px;
+  bottom: 0;
+  color: #F7F9CD;
+}
+
+h1:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  position: absolute;
+  font-size: 23px;
+  left: -23px;
+  bottom: 0;
+  color: #F7F9CD;
+}
+
+/* 肉球部分 */
+h2 {
+  position: relative;/*相対位置*/
+  padding-left: 1.2em;/*アイコン分のスペース*/
+  line-height: 1.4;/*行高*/
+  color: #7b6459;/*文字色*/
+}
+
+h2:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1b0";/*アイコンのユニコード*/
+  font-weight: 900;
+  position: absolute;/*絶対位置*/
+  font-size: 1em;/*サイズ*/
+  left: 0;/*アイコンの位置*/
+  top: 0;/*アイコンの位置*/
+  color: #ff938b; /*アイコン色*/
+}
+
+h3{
+color: black;
+}
+p{
+font-size: 14px;
+}
+}
+
+.button02{
+display: none;
+@include size-s{
+display: block;
+margin-bottom: 30px;
+}
+}
+
+.button02 a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 300px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #ff938b;
+  border-radius: 50vh;
+}
+
+.button02 a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+  transform: rotate(45deg);
+}
+
+.button02 a:hover {
+  text-decoration: none;
+  background-color: #ff938b;
+}
+
+#more::before{
+content: "もっと見る";
+}
+
+#more.close::before{
+content: "閉じる";
+}
