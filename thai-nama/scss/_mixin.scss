@@ -1,0 +1,19 @@
+@use "break-point" as var;
+
+//mixinの登録
+@mixin tablet {
+    @media (max-width:var.$point-tablet){
+    @content;
+   }
+   }
+   @mixin sp-l{
+    @media (max-width:var.$point-sp-l){
+    @content;
+   }
+   }
+   @mixin sp-s{
+    @media (max-width:var.$point-sp-s){
+    @content;
+   }
+   }
+   

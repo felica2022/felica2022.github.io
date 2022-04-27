@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- ﾀﾌﾞﾚｯﾄを横にしても拡大しない -->
+<title>SCSS演習|THAI-NAMA</title>
+<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header>
+<div class="inner">
+<h1>THAI-NAMA</h1>
+<nav class="g-nav">
+<ul>
+    <li><a href="#">CONCEPT</a></li>
+    <li><a href="#">MENU</a></li>
+    <li><a href="#">ACCESS</a></li>
+    <li><a href="#">CONTACT</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="main-visual">
+<picture>
+<source media="(min-width:641px)" srcset="img/main.jpg 980w" sizes="100%">
+<source media="(max-width:640px)" srcset="img/main-sp-l.jpg 1280w" sized="100%">
+<img src="img/main.jpg" alt="">
+</picture>
+</div>
+<p class="main-copy">THAI-NAMAは<br>
+タイ風の家庭的な料理をご提供しているお店です。<br>
+季節感を大切に、旬のものを使いつつ、楽しんで貰えるメニューを揃えています。</p>
+
+<ul class="food">
+<li><img src="img/sub1.jpg" alt=""></li>
+<li><img src="img/sub2.jpg" alt=""></li>
+<li><img src="img/sub3.jpg" alt=""></li>
+</ul>
+
+<div class="news">
+<h2>NEWS</h2>
+<dl>
+<dt>2020/03/03</dt>
+<dd>春のメニューを追加しました</dd>
+</dl>
+</div> 
+</main>
+
+<footer>
+<ul class="footer-nav">
+    <li><a href="#">CONCEPT</a></li>
+    <li><a href="#">MENU</a></li>
+    <li><a href="#">ACCESS</a></li>
+    <li><a href="#">CONTACT</a></li>
+</ul>
+<div class="footer-wrapper">
+<div class="footer-info">
+<p class="tel"><a href="tel:03-1234-4567">03-1234-4567</a></p>
+<p class="mail">reservation@thai-nama.net</p>
+</div>
+<div class="footer-address">
+<p class="address-txt">〒150-0001 東京都渋谷区神宮前3-4-5 タイ生ビル1F</p>
+<p class="jr">JR渋谷駅徒歩5分</p>
+<p class="jr">JR原宿駅徒歩6分</p>
+<p class="subway">副都心線、千代田線明治神宮前徒歩7分</p>
+</div><!-- /.footer-address -->
+</div><!-- /.footer-wrapper -->
+<p class="copy-right"><small>Copyright 2022<span id="this-year"></span> THAI-NAMA</small></p>
+</footer>
+
+<script>
+var today=new Date();
+var myYear = today.getFullYear();
+if(myYear >= 2023){  
+document.getElementById('this-year').innerHTML = '-' + myYear;
+} 
+</script>
+    
+</body>
+</html>
