@@ -1,0 +1,143 @@
+@charset "uft-8";
+@import "_reset.scss";
+
+img{
+max-width: 100%;
+}
+/* header部分 */
+header{
+width: 100%;
+height: 80px;
+background-color: #FFF;
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+#g-nav>ul{
+display: flex;
+}
+#g-nav li{
+margin: 0 20px;
+}
+#g-nav a{
+display: block;
+padding: 10px;
+color: #333;
+}
+#g-nav li.current>a,#g-nav a:hover{
+text-decoration: underline;
+}
+main{
+padding-top: 80px;
+}
+h2{
+text-align: center;
+padding-top: 60px;
+position: relative;
+padding: 1rem .5rem;
+font-size: 36px;
+width: 300px;
+margin: 0 auto 50px;
+}
+h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: '';
+  border-radius: 3px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#2af598), to(#009efd));
+  background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);
+  background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
+}
+/* メインビジュアル */
+.main-visual{
+width: 100%;
+height: 100vh;
+background-color: burlywood;
+}
+/* コンテンツ部分 */
+.box{
+width: 100%;
+
+}
+/* works部分 */
+.works-wrapper{
+max-width: 1200px;
+margin: 0 auto 100px;
+display: flex;
+justify-content: space-between;
+}
+.works-box{
+width: calc((100% - 20px) / 3);
+}
+
+/* code-pen部分 */
+.code-pen-box{
+max-width: 960px;
+margin: 0 auto 100px;
+}
+
+/* フォーム部分 */
+#g-form{
+max-width: 800px;
+margin: 0 auto 100px;
+}
+#g-form>dl{
+display: flex;
+flex-wrap: wrap;
+border: 1px solid #999;
+}
+#g-form dt{
+width: 30%;
+background-color: #DDD;
+padding: 20px;
+border-right: 1px solid #999;
+}
+#g-form dd{
+width: 70%;
+padding: 20px;
+}
+#g-form dt:nth-of-type(n+2),#g-form dd:nth-of-type(n+2){
+border-top: 1px solid #999;
+}
+[type="text"],[type="email"],textarea{
+display: block;
+width: 70%;
+border: 1px solid #AAA;
+}
+textarea{
+height: 160px;
+}
+dt>span{
+display:inline-block;
+background-color: firebrick;
+color: #FFF;
+font-size: 12px;
+padding: 4px 6px;
+margin-left: 10px;
+}
+form p{
+margin: 40px 0 20px;
+text-align: center;
+}
+[type="submit"]{
+display: block;
+width: 40%;
+margin: 0 auto;
+height: 60px;
+border: 4px solid #008080;
+color: #008080;
+text-align: center;
+line-height: 60px;
+border-radius: 6px;
+transition: 0.2s;
+}
+[type="submit"]:hover{
+background-color:  #008080;
+color: #FFF;
+}

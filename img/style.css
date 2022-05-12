@@ -1,0 +1,404 @@
+@charset "utf-8";
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0;box-sizing:border-box;}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}small{font-size:80%}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input{border-radius:0}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:0;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted ButtonText}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button,select{text-transform:none}button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}img{border-style:none;vertical-align: bottom}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute!important;clip:rect(0 0 0 0)!important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}ul,ol{list-style:none;}a{text-decoration:none;}.wrapper{overflow:hidden;}body{overflow-y:scroll;}img{max-width: 100%;}
+
+/* spレイアウト */
+body{
+color: #95786c;
+}
+header{
+width: 100%;
+height: 100px;
+background-color: #fbf4d9;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+position: fixed;
+top: 0;
+z-index: 9999;
+}
+h1{
+width: 300px;
+height: 80px;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+background: url(../img/portfolio-logo-0429.png) no-repeat center center/contain;/* x方向もy方向もcenter */
+}
+#ham-btn{
+width: 40px;
+height: 40px;
+/* border: 2px solid #95786c; *//* 文字色後で変更 */
+position: relative;
+}
+#ham-btn>span{
+display: block;
+width: 26px;
+height: 2px;
+background-color: #95786c;
+position: absolute;
+top: -16px;/* 上の線 */
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+transition: 0.2s;
+}
+#ham-btn>span::after{
+display: block;
+content: "";/* ←必ず入れる */
+color: #ffd700;
+width: 26px;
+height: 2px;
+background-color: #95786c;/* 一旦色を変えて確認 */
+position: absolute;
+top: 16px;
+}
+#ham-btn.click>span{
+top: 0;
+transform: rotate(45deg);
+}
+#ham-btn.click>span::after{
+top: 0;
+transform: rotate(90deg);
+}
+
+#g-nav{
+width: 100%;
+height: calc(100vh - 100px);
+position: fixed;
+top: 100px;
+background-color: #a9efd2;
+padding: 10px 40px;
+/* display: none; *//* 最初は非表示 */
+transform: translateX(-100%);/* マイナスにすると左側に寄る */
+transition: 0.2s;
+z-index: 9999;
+}
+
+#g-nav.slide{
+transform: translateX(0);/* slideというclass名が付いたら0に戻す */
+transition: 0.2s;
+}
+
+#g-nav a{
+display: flex;
+justify-content: space-between;
+width: 100%;
+line-height: 50px;
+border-bottom: 2px solid #95786c;
+}
+
+#g-nav a{
+/* display: block; */
+/* padding: 14px 0 10px 12px; */
+color: #95786c;
+}
+main{
+padding: 70px 10px 0;/* bottom 10px→0に */
+}
+.contents-img{
+width: 90%;
+height: 220px;
+margin: 0 10px;
+background-color: #fbf4d9;
+object-fit: fill;
+}
+.contents-img>img{
+object-fit: cover;/* これを指定すれば縦横比は同じ */
+width: 100%;
+height: 100%;
+}
+.contents-txt{
+background-color: #a9efd2;
+padding: 30px;
+margin-bottom: 10px;
+}
+#wordpress{
+background-color: #c8a87d;
+padding: 30px;
+margin-bottom: 10px;
+}
+.contents-txt>h2{
+margin-bottom: 20px;
+}
+.txt{
+margin-bottom: 20px;
+}
+.contents:nth-of-type(2)>.contents-txt{
+background-color: #fdfff0;
+}
+/* .contents:nth-of-type(3)>.contents-txt{
+background-color: #dfe99a;
+} */
+.contents-btn{
+width: 60%;/* pxじゃないよ、%だよ */
+margin: 20px auto;
+}
+.contents-btn>a{
+display: block;
+padding: 8px 0;
+background-color: white;
+text-align: center;
+color: #95786c;
+}
+
+.contents-btn>a::after{/* afterを使うと要素の後ろ */
+display: inline-block;/* 横に並んで幅・高さの指定ができる */
+content: "";
+width: 10px;
+height: 10px;
+border-top: 1px solid #95786c;
+border-right: 1px solid #95786c;
+transform: rotate(45deg);
+margin-left: 10px;
+}
+
+/* col-1部分 */
+.col-1{
+
+padding: 40px;
+background-color: #fff3d0;
+margin-bottom: 10px;
+}
+.col-1>h2{
+margin-bottom: 30px;
+}
+.col-1>p{
+line-height: 1.8;
+color : #95786c;
+}
+
+/* PDF */
+.pdf-icon{
+display: flex;
+}
+#pdf{
+width: 20px;
+height: 20px;
+}
+
+
+/* col-3部分 */
+.col-3-box{
+margin-bottom: 10px;
+}
+.col-3-img{
+width: 100%;
+height: 300px;/* 高さは自由 (これを指定すればPsでトリミング不要)*/
+}
+.col-3-img>img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+.col-3-txt{
+background-color: #cae8ff;/* 薄いブルー */
+padding: 40px;
+}
+.col-3-box:nth-of-type(2)>.col-3-txt{
+background-color: #ffc3df;
+}
+.col-3-box:nth-of-type(3)>.col-3-txt{
+background-color: #b7c0fb;
+}
+.col-3-txt>h3{
+margin-bottom: 20px;
+text-align: center;
+}
+.icon-wrapper{
+display: flex;
+}
+.icon{
+width: 50px;
+padding: 10px;/* 高さは自由 (これを指定すればPsでトリミング不要)*/
+/* border-radius: 50%; */
+clip-path: circle(50%);
+/* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);星形になる Clippyから */
+background-color: white;
+height: 50px;
+margin: 0 auto 20px;
+}
+
+/* col-3-txt2部分 */
+.col-3-box{
+margin-bottom: 10px;
+}
+.col-3-img{
+width: 100%;
+height: 300px;/* 高さは自由 (これを指定すればPsでトリミング不要)*/
+}
+.col-3-img>img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+.col-3-txt2{
+background-color: #b7c0fb;/* 薄いパープル */
+padding: 40px;
+}
+.col-3-box:nth-of-type(2)>.col-3-txt2{
+background-color: #ffc3df;
+}
+.col-3-box:nth-of-type(3)>.col-3-txt2{
+background-color: #cae8ff;
+}
+.col-3-txt2>h3{
+margin-bottom: 20px;
+text-align: center;
+}
+.icon-wrapper{
+display: flex;
+}
+.icon{
+width: 50px;
+padding: 10px;/* 高さは自由 (これを指定すればPsでトリミング不要)*/
+/* border-radius: 50%; */
+clip-path: circle(50%);
+/* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);星形になる Clippyから */
+background-color: white;
+height: 50px;
+margin: 0 auto 20px;
+}
+
+
+footer{
+background-color: #fbf4d9;
+}
+footer>p{
+text-align: center;
+padding: 40px 0;
+}
+
+/* col-3-txt2部分 */
+.col-3-txt{
+background-color: #cae8ff;/* 薄いブルー */
+padding: 40px;
+}
+.col-3-box:nth-of-type(2)>.col-3-txt{
+background-color: #ffc3df;
+}
+.col-3-txt>h3{
+margin-bottom: 20px;
+text-align: center;
+}
+
+/* タブレットレイアウト */
+@media (min-width: 768px){
+#g-nav{
+width: 40%;
+}
+#nav-wrapper{
+width: 100%;
+height: calc(100vh - 100px);
+position: fixed;
+top: 80px;
+z-index: 10;
+background-color: hsla(0, 0%, 0%, 0.527);
+display: none;
+}
+
+.contents{
+display: flex;
+justify-content: space-between;
+}
+.contents:nth-of-type(even){
+flex-direction: row-reverse;
+}
+.contents-img{
+height: 420px;/* flex boxのルールで高い方に合う */
+width: calc((100% - 10px) / 3 * 2);
+}
+.contents-txt{
+width: calc((100% - 10px) / 3);
+}
+.col-1{
+text-align: center;
+padding: 80px 40px;
+}
+.col-1>p{
+max-width: 600px;/* 幅の設定をすると真ん中にこない */
+margin: 0 auto;/* ここで中央にする */
+}
+.col-3-box{
+display: flex;
+padding: 10px;
+}
+.col-3-img{
+width: 50%;
+height: 320px;
+}
+.col-3-txt{
+width: 50%;
+}
+}
+
+@media (min-width: 900px){
+header{
+height: 100px;
+}
+h1{
+width: 400px;
+height: 100px;
+margin: 0 auto;
+}
+main{
+padding: 110px 10px 0;/* 上をheader+10px */
+max-width: 1366px;
+margin: 0 auto;
+}
+.col-3-wrapper{
+display: flex;
+justify-content: space-between;
+}
+.col-3-box{
+width: calc((100% - 20px) / 3);
+display: block;/* divはもともとdisplay block */
+}
+
+.col-3-img{
+width: 100%;
+}
+.col-3-txt{
+width: 100%;
+}
+
+main{
+padding: 70px 10px 0;
+max-width: 1366px;/* 大画面PC対応 */
+margin: 0 auto;
+}
+body{
+background-color: #fbf4d9;
+}
+}
+
+/* ローディングアニメーション */
+#curtain{
+width: 100%;
+height: 100vh;
+background-color: #a9efd2;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+z-index: 10000;
+}
+#svg-box{
+width: 40%;
+}
+#layer_1 path{
+stroke: #95786c;/* 線の色 */
+fill: #a9efd2;/* 塗りの色 */
+stroke-width: 1px;/* 線幅 (デフォルト1px) */
+stroke-dasharray: 300px;/* 線幅の間隔(全部が見えるところまで大きくする) */
+stroke-dashoffset: 300px;/* 破線の間隔と同じ価にする */
+animation: svg 2s 0.5s linear forwards;
+/* 名前/時間/どう進むか/forwardsを入れないと何も表示されない */
+}
+@keyframes svg{
+0%{stroke-dashoffset: 300px;}/* dashoffsetの値を入れる */
+70%{stroke-dashoffset: 0; fill: #a9efd2;}
+100%{stroke-dashoffset: 0; fill: #95786c;}
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="inquiry.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+</head>
+<body>
+<header>
+<h1>Portfolio</h1>
+<nav id="g-nav">
+<ul>
+<li class="current" id="list1"><a href="#">top</a></li>
+<li id="list2"><a href="#">content1</a></li>
+<li id="list3"><a href="#">content2</a></li>
+<li id="list4"><a href="#">content3</a></li>
+<li id="list5"><a href="#">content4</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div class="main-visual">
+<h2>ここにメインビジュアル</h2>
+</div>
+<div class="box">content1</div>
+<div class="box">content2</div>
+<div class="box" id="works">
+<h2>works</h2>
+<div class="works-wrapper">
+<div class="works-box">
+<a data-fancybox data-type="iframe" data-src="site1/index.html" href="javascript:;">
+<img src="img/works01.jpg" alt=""></a>
+</div><!-- /.works-box -->
+<div class="works-box">
+<img src="img/works01.jpg" alt="">
+</div><!-- /.works-box -->
+<div class="works-box">
+<img src="img/works01.jpg" alt="">
+</div><!-- /.works-box -->
+</div><!-- /.works-wrapper -->
+
+<div class="code-pen-box">
+<h2>Code Pen</h2>
+<div class="code-pen-inner">
+<p class="codepen" data-height="383" data-theme-id="light" data-default-tab="html,result" data-user="yachin29" data-slug-hash="bGpJzJp" style="height: 383px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="svg-animation">
+  <span>See the Pen <a href="https://codepen.io/yachin29/pen/bGpJzJp">
+  svg-animation</a> by yachin29 (<a href="https://codepen.io/yachin29">@yachin29</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div><!-- /.code-pen-inner -->
+</div><!-- /.code-pen-box -->
+</div><!-- /#works -->
+
+
+
+<div class="box">
+<h2>お問い合わせフォーム</h2>
+<form id="g-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeMffYE0x9190d8kzadzV17ANbm2cVxsgoFAeVsUYoq5Hf8Sg/formResponse" method="POST">
+<dl>
+<dt>お名前<span>必須</span></dt>
+<dd><input type="text" required placeholder="お名前をご入力ください" name="entry.1405312760"></dd>
+<dt>メールアドレス<span>必須</span></dt>
+<dd><input type="email" required name="entry.1451805250"></dd>
+<dt>性別</dt>
+<dd>
+<label for="male">
+<input type="radio" id="male" name="entry.16159636" value="男性">男性</label>
+<label for="female">
+<input type="radio" id="female" name="entry.16159636" value="女性">女性</label>
+</dd>
+
+<dt>お問い合わせ内容<span>必須</span></dt>
+<dd><textarea required placeholder="お問い合わせ内容をご入力下さい" name="entry.991527894"></textarea></dd>
+</dd>
+</dl>
+<p>内容をご確認の上、送信ボタンを押して下さい</p>
+<input type="submit" value="送信">
+</form>
+</div>
+
+</main>
+<footer></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script>
+$(function(){
+$('#g-form').submit(function (event) {
+var formData = $('#g-form').serialize();
+$.ajax({
+  url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeMffYE0x9190d8kzadzV17ANbm2cVxsgoFAeVsUYoq5Hf8Sg/formResponse",
+  data: formData,
+  type: "POST",
+  dataType: "xml",
+  statusCode: {
+    0: function(){
+      window.location.href = "thanks.html";
+      },
+    200: function(){
+     //失敗したときの処理
+      }
+    }
+  });
+//googleformへのページ遷移をキャンセル
+event.preventDefault();
+});
+});
+</script>
+</body>
+</html>

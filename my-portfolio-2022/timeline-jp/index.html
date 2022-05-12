@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: #424949;
+  background-color: #ECF0F1;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  height: 38px;
+  margin: 60px 0;
+}
+h1 span {
+  white-space: nowrap;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.input-flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  max-width: 1000px;
+  position: relative;
+  z-index: 0;
+  margin-left: calc((80vw - 25px) / 20);
+}
+
+input {
+  width: 25px;
+  height: 25px;
+  background-color: #2C3E50;
+  position: relative;
+  border-radius: 50%;
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+}
+input::before, input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2C3E50;
+  width: 4vw;
+  height: 5px;
+  max-width: 50px;
+}
+input::before {
+  left: calc(-4vw + 12.5px);
+}
+input::after {
+  right: calc(-4vw + 12.5px);
+}
+input:checked {
+  background-color: #2C3E50;
+}
+input:checked::before {
+  background-color: #2C3E50;
+}
+input:checked::after {
+  background-color: #AEB6BF;
+}
+input:checked ~ input, input:checked ~ input::before, input:checked ~ input::after {
+  background-color: #AEB6BF;
+}
+input:checked + .dot-info span {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.dot-info {
+  width: 25px;
+  height: 25px;
+  display: block;
+  visibility: hidden;
+  position: relative;
+  z-index: -1;
+  left: calc((((80vw - 25px) / 20) * -1) - 1px);
+}
+.dot-info span {
+  visibility: visible;
+  position: absolute;
+  font-size: 12px;
+}
+.dot-info span.year {
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dot-info span.label {
+  top: -65px;
+  left: 0;
+  transform: rotateZ(-45deg);
+  width: 70px;
+  text-indent: -10px;
+}
+
+#timeline-descriptions-wrapper {
+  width: 100%;
+  margin-top: 140px;
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: calc((-80vw - 25px) / 20);
+}
+#timeline-descriptions-wrapper p {
+  margin-top: 0;
+  display: none;
+}
+
+input[data-description="1910"]:checked ~ #timeline-descriptions-wrapper p[data-description="1910"] {
+  display: block;
+}
+
+input[data-description="1920"]:checked ~ #timeline-descriptions-wrapper p[data-description="1920"] {
+  display: block;
+}
+
+input[data-description="1930"]:checked ~ #timeline-descriptions-wrapper p[data-description="1930"] {
+  display: block;
+}
+
+input[data-description="1940"]:checked ~ #timeline-descriptions-wrapper p[data-description="1940"] {
+  display: block;
+}
+
+input[data-description="1950"]:checked ~ #timeline-descriptions-wrapper p[data-description="1950"] {
+  display: block;
+}
+
+input[data-description="1960"]:checked ~ #timeline-descriptions-wrapper p[data-description="1960"] {
+  display: block;
+}
+
+input[data-description="1970"]:checked ~ #timeline-descriptions-wrapper p[data-description="1970"] {
+  display: block;
+}
+
+input[data-description="1980"]:checked ~ #timeline-descriptions-wrapper p[data-description="1980"] {
+  display: block;
+}
+
+input[data-description="1990"]:checked ~ #timeline-descriptions-wrapper p[data-description="1990"] {
+  display: block;
+}
+
+input[data-description="2000"]:checked ~ #timeline-descriptions-wrapper p[data-description="2000"] {
+  display: block;
+}
+
+@media (min-width: 1250px) {
+  .input-flex-container {
+    margin-left: 62.5px;
+  }
+
+  input::before {
+    left: -37.5px;
+  }
+  input::after {
+    right: -37.5px;
+  }
+
+  .dot-info {
+    left: calc((((1000px - 25px) / 20) * -1) - 1px);
+  }
+
+  #timeline-descriptions-wrapper {
+    margin-left: -37.5px;
+  }
+}
+@media (max-width: 630px) {
+  .flex-parent {
+    justify-content: initial;
+  }
+
+  .input-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    height: auto;
+    margin-top: 15vh;
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+
+  input, .dot-info {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px 50px;
+  }
+
+  input {
+    background-color: transparent !important;
+    z-index: 1;
+  }
+  input::before, input::after {
+    content: none;
+  }
+  input:checked + .dot-info {
+    background-color: #2C3E50;
+  }
+  input:checked + .dot-info span.year {
+    font-size: 14px;
+  }
+  input:checked + .dot-info span.label {
+    font-size: 12px;
+  }
+
+  .dot-info {
+    visibility: visible;
+    border-radius: 50%;
+    z-index: 0;
+    left: 0;
+    margin-left: -70px;
+    background-color: #AEB6BF;
+  }
+  .dot-info span.year {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ECF0F1;
+  }
+  .dot-info span.label {
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-indent: 0;
+    text-align: center;
+  }
+
+  #timeline-descriptions-wrapper {
+    margin-top: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .input-flex-container {
+    width: 340px;
+  }
+}
+@media (max-width: 400px) {
+  .input-flex-container {
+    width: 300px;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1>タイムライン</h1>
+</header>
+
+<!-- THE CHALLENGE: -->
+<!-- 1. recreate version 3 (https://codepen.io/cjl750/pen/mXbMyo) with no javascript whatsoever
+     2. make code as abstract as possible (e.g., trying to calc positions that would work with any number of dots instead of hard-coding the container width as we do in our media queries)
+     3. highest browser support possible -->
+<!-- Bonus points: turn v3's pseudo content into actual element content, so it's accessible to screen readers, search engines, etc. -->
+
+<h1>My Career, <span>1999-2027</span></h1>
+<div class="flex-parent">
+	<div class="input-flex-container">
+		<input type="radio" name="timeline-dot" data-description="1910">
+		<div class="dot-info" data-description="1910">
+			<span class="year">1999-2000</span>
+			<span class="label">Translation & Secretary</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1920">
+		<div class="dot-info" data-description="1920">
+			<span class="year">2002</span>
+			<span class="label">Trading(Export)</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1930" checked>
+		<div class="dot-info" data-description="1930">
+			<span class="year">2004-2006</span>
+			<span class="label">Compilation of Manual</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1940">
+		<div class="dot-info" data-description="1940">
+			<span class="year">2006-2008</span>
+			<span class="label">Translation</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1950">
+		<div class="dot-info" data-description="1950">
+			<span class="year">2008</span>
+			<span class="label">Translation</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1960">
+		<div class="dot-info" data-description="1960">
+			<span class="year">2008-2020</span>
+			<span class="label">English-speaking Tour Guide</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1970">
+		<div class="dot-info" data-description="1970">
+			<span class="year">2021</span>
+			<span class="label">Translation + Trading(Export</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1980">
+		<div class="dot-info" data-description="1980">
+			<span class="year">2022</span>
+			<span class="label">Tour Guide + Web</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="1990">
+		<div class="dot-info" data-description="1990">
+			<span class="year">2025</span>
+			<span class="label">Tour Guide</span>
+		</div>
+		<input type="radio" name="timeline-dot" data-description="2000">
+		<div class="dot-info" data-description="2000">
+			<span class="year">2027</span>
+			<span class="label">English & Italian-speaking Tour Guide</span>
+		</div>
+		<div id="timeline-descriptions-wrapper">
+			<p data-description="1910">国立公衆衛生院(現:国立保健医療科学院)のホームページの和文英訳
+(使用ソフト : ホームページビルダー)
+</p>
+			<p data-description="1920">貿易事務-輸出(韓国・台湾向けめっき処理薬品の輸出および買取り業務)</p>
+			<p data-description="1930">英文マニュアル編集、英文マニュアルの(差分)チェック、アメリカ向け複合機のUIの和文英訳、クライアントの社内Eメールの翻訳(日本語⇔英語) (使用ソフト : Photoshop / Illustrator)
+</p>
+			<p data-description="1940">翻訳(データセンタの機密保持契約書の英文和訳/和文英訳)、客先提出資料の和文英訳</p>
+			<p data-description="1950">翻訳(クラウド・コンピューティングに関わる社内資料および客先提出資料の和文英訳、有害事象の英文和訳/和文英訳、治験薬・取引先のHP英文和訳、客先提出資料の和文英訳</p>
+			<p data-description="1960">世界各国より約22,000人以上の訪日旅行外国人の都内を中心に全国の観光地の英語通訳ガイド</p>
+			<p data-description="1970">治験薬に関する翻訳、貿易事務-輸出(タイ向け自動車のブレーキ薬品の輸出)、購買業務、営業事務</p>
+			<p data-description="1980">外資系ECサイト運営会社または一般企業の広報部にて翻訳、英文事務に加えてサイト更新業務など</p>
+			<p data-description="1990">外資系ECサイト運営会社または一般企業の広報部にて翻訳、英文事務に加えてサイト更新業務など</p>
+			<p data-description="2000">新型コロナ収束後、本職に全面復帰</p>
+		</div>
+	</div>
+</div>
+
+
+<div style="position: absolute; bottom: 15px; right: 10px; font-size: 12px">
+	<a href="https://codepen.io/cjl750/pen/mXbMyo" target="_blank">based off of version 3</a></div>
+    
+</body>
+</html>
