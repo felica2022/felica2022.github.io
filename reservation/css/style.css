@@ -1,0 +1,139 @@
+@charset 'utf-8';
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0;box-sizing:border-box;}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}small{font-size:80%}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input{border-radius:0}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:0;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted ButtonText}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button,select{text-transform:none}button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}img{border-style:none;vertical-align: bottom}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute!important;clip:rect(0 0 0 0)!important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}ul,ol{list-style:none;}a{text-decoration:none;}.wrapper{overflow:hidden;}body{overflow-y:scroll;}img{max-width: 100%;}
+
+h1{
+text-align: center;
+margin: 40px auto;
+}
+h2{
+max-width: 680px;
+margin: 0 auto 60px;
+padding: 0 10px;
+}
+#g-form{
+max-width: 800px;
+margin: 0 auto;    
+}
+
+.form-list-wrapper{
+max-width: 960px;
+margin: 0 auto;
+}
+
+.form-list{
+display: flex;
+flex-wrap: wrap;
+border: 1px solid #5f5f5f;
+margin-bottom: 100px;
+margin: 10px auto;
+}
+
+.form-list>dt{
+width: 30%;
+padding: 20px;
+background-color: rgba(196, 240, 246, 0.453);
+border-right: 1px solid #5f5f5f;
+}
+.form-list span{
+font-size: 13px;
+background-color: tomato;  
+color: #fff; 
+margin-left: 10px;
+}
+.form-list>dd{
+width: 70%;
+padding: 20px;
+background-color: rgba(220, 228, 233, 0.62);
+}
+.form-list>dt:nth-of-type(n+2),
+.form-list>dd:nth-of-type(n+2){
+border-top: 1px solid #5f5f5f
+}
+[type="text"],[type="email"]{
+width: 70%; 
+background-color: #fff;
+border: 1px solid #5f5f5f;
+padding: 6px 4px;   
+}
+[type="radio"],[type="checkbox"]{
+margin-right: 8px;
+transform: scale(1.5);
+}
+label{
+margin-right: 20px;
+}
+.zip>input{
+width: 30%; 
+}
+[name="prefecture"]{
+margin-bottom: 20px;
+}
+.policy, .policy-check{
+max-width: 800px;
+margin: 0 auto 100px;
+}
+
+.policy h3{
+text-align: center;
+font-size: 26px;
+margin: 30px 0 20px;
+}
+.policy p{
+line-height: 1.8;
+}
+.policy-inner{
+max-width: 100%;
+height: 300px;
+border: 2px solid #aaa;
+/* background-color: antiquewhite; */
+padding: 20px;
+overflow-y: scroll;
+/* margin-bottom: 100px; */
+}
+[for="policy-check"]{
+background-color: #ccc;
+padding: 20px;
+display: block;    
+}
+
+.btn-wrapper{
+width: 260px;
+margin: 40px auto;
+position: relative;
+border: 2px solid #c5173a;
+border-radius: 12px;
+overflow: hidden;
+}
+.btn-wrapper::after{
+display: block;
+content: "";
+width: 100%;
+height: 200%;
+background-color: #c5173a;
+position: absolute;
+transform: rotate(-45deg);
+top: -90px;
+left: -140px;
+z-index: 1;
+transition: 0.2s;
+}
+.btn-wrapper:hover::after{
+transform: scale(2.5);
+}
+[type="submit"]{
+display: block;
+width: 100%;
+padding: 10px 0;
+position: relative;
+z-index: 2;
+color:rgb(220, 228, 233);
+}
+
+.back-btn{
+display: block;
+width: 260px;
+padding: 10px 0;
+background-color: #aaa;
+margin: 0 auto;
+border-radius: 12px;
+}
