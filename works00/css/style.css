@@ -1,0 +1,78 @@
+@charset "utf-8";
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0;box-sizing:border-box;}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}small{font-size:80%}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input{border-radius:0}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:0;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted ButtonText}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button,select{text-transform:none}button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}img{border-style:none;vertical-align: bottom}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute!important;clip:rect(0 0 0 0)!important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}ul,ol{list-style:none;}a{text-decoration:none;}.wrapper{overflow:hidden;}body{overflow-y:scroll;}img{max-width: 100%;}
+
+h1{
+text-align: center;
+margin: 60px 0 20px;
+}
+
+.container{
+width: 800px;
+margin: 40px auto 60px;
+background-color: bisque;
+padding: 10px;
+}
+#tab{
+display: flex;
+}
+#tab>li{
+width: 25%;
+height: 50px;
+}
+#tab a{
+display: block;
+text-align: center;
+line-height: 50px;
+background-color: rgb(247, 190, 120);
+color: brown;
+}
+#tab>li:nth-of-type(n+2)>a{
+border-left: 4px solid #888;/* .containerの背景色 */
+}
+#tab>li.current>a{
+color: #444;
+background-color: #FFF;
+}
+
+
+.panel,.panel02{
+background-color: #FFF;
+padding: 10px;
+display: none;/* 非表示にする */
+}
+.panel.current, .panel02.current{
+display: block;
+}
+
+.txt-box{
+max-width: calc(100% - 40px);
+padding: 20px;
+margin-left: 40px;
+}
+ul{
+display: flex;
+gap: 40px;
+}
+li{
+width: 400px;
+}
+
+/* 丸アイコン */
+.icon-wrapper{
+display: flex;
+}
+.icon{
+width: 60px;
+padding: 10px;/* 高さは自由 (これを指定すればPsでトリミング不要)*/
+/* border-radius: 50%; */
+clip-path: circle(50%);
+background-color: white;
+height: 60px;
+}
+
+button{
+width: 200px;
+height: 50px;
+background-color: bisque;
+color: brown;
+}
