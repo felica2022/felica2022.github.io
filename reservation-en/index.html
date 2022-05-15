@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felica Tour|入力画面</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<p><a href="http://gattina299.starfree.jp/felica-tour-jp/">Back to HOME</a></p>
+<p><a href="http://gattina299.starfree.jp/felica-tour-jp/tour/tour-index.html">Back to List for Tours</a></p>
+<h1>Reservation Form</h1>
+<h2><img src="img/0501_step1.svg" alt=""></h2>
+<form action="confirm.php" method="post">
+<div class="form-list-wrapper">
+<dl class="form-list">
+<dt>Name of Representative<span>Required</span></dt>
+<dd><input type="text" name="onamae" required placeholder="Input the name of representative." autocomplete="name"></dd><!-- name属性必須(但しname属性の中にnameはNG!) -->
+
+<dt>Gender<span class="any">Optional</span></dt>
+<dd class="gender">
+<label for="male">
+<input type="radio" name="gender" value="Male" id="male">Male</label>
+<label for="female">
+<input type="radio" name="gender" value="Female" checked id="female">Female</label>
+<label for="other">
+<input type="radio" name="gender" value="X" id="other">X</label>
+<label for="other">
+<input type="radio" name="gender" value="No anser" id="other">No answer</label>
+</dd>
+
+<dt>E-mail Address<span>Required</span></dt>
+<dd><input type="email" name="email" required placeholder="Input your E-mail address." autocomplete="email"></dd>
+
+<dt>Date of Tour</dt>
+<dd><input type="date" name="date"></dd>
+
+<dt>Number of Persons<span id="eleven"><small>In case of more than 11 persons, please contact from our inquiry form.</small></span></dt>
+<dd>
+<select name="pax">
+<option value="choice" selected>Choose one.</option>
+<option value="1 person">1 person</option>
+<option value="2 persons">2 persons</option>
+<option value="3 persons">3 persons</option>
+<option value="4 persons">4 persons</option>
+<option value="5 persons">5 persons</option>
+<option value="6 persons">6 persons</option>
+<option value="7 persons">7 persons</option>
+<option value="8 persons">8 persons</option>
+<option value="9 persons">9 persons</option>
+<option value="10 persons">10 persons</option>
+</select>
+</dd>
+
+<dt>Tour No./Tour Name</dt>
+<!-- <dd name="number"> -->
+<dd>
+<select name="tour">
+<option value="choice" selected>Choose one.</option>
+<option value="FE201:Tokyo 3spots Tour(AM)">FE201:Tokyo 3spots Tour(AM)</option>
+<option value="FE202:Tokyo 3spots Tour(PM)">FE202:Tokyo 3spots Tour(PM)</option>
+<option value="FE206:Shrine Visiting Tour(AM)">FE206:Shrine Visiting Tour(AM)</option>
+<option value="FE220:Tokyo Sky Tree & Asakusa Tour">FE220:Tokyo Sky Tree & Asakusa Tour</option>
+<option value="FE204:Japanese Culture Experience Tour">FE204:Japanese Culture Experience Tour</option>
+<option value="FE215:Shrine Visiting Tour(1 Day)">FE215:Shrine Visiting Tour(1 Day)</option>
+<option value="FE286:Mt.Fuji 5th Station Tour">FE286:Mt.Fuji 5th Station Tour</option>
+<option value="FE350:Mt.Fuji & Lake Kawaguchi Tour">FE350:Mt.Fuji & Lake Kawaguchi Tour</option>
+<option value="FE359:World Heritage Nikko Tour">FE359:World Heritage Nikko Tour</option>
+</select>
+</dd>
+
+<!-- <dt>コース名</dt> -->
+<!-- <dd name="tour"> -->
+<!-- <dd>
+<select name="tour2">
+<option value="choice" selected>選択してください</option>
+<option value="AM 都内3名所(午前)ツアー">都内3名所(午前)ツアー</option>
+<option value="PM 都内3名所(午後)ツアー">都内3名所(午後)ツアー</option>
+<option value="JAM 神社参拝(午前)神社参拝(1日)ツアー">神社参拝(午前)ツアー</option>
+<option value="SKY 東京スカイツリーと浅草ツアー">東京スカイツリーと浅草ツアー</option>
+<option value="CUL 日本文化体験ツアー">日本文化体験ツアー</option>
+<option value="JPM 神社参拝(1日)ツアー">神社参拝(1日)ツアー</option>
+<option value="FUJ 富士山五合目ツアー">富士山五合目ツアー</option>
+<option value="FEK 富士山と河口湖ツアー">富士山と河口湖ツアー</option>
+<option value="NIK 世界遺産日光ツアー">世界遺産日光ツアー</option>
+</select>
+</dd> -->
+
+<dt>Food Restriction or Allergy<br><span>Multiple answers allowed</span></dt>
+<dd>
+<label for="food1"><input type="checkbox" name="food[]" value="No raw fish" id="food1">No raw fish</label>
+<label for="food2"><input type="checkbox" name="food[]" value="No pork" id="food2">No pork</label>
+<label for="food3"><input type="checkbox" name="food[]" value="Vegetarian" id="food3">Vegetarian</label>
+<label for="food4"><input type="checkbox" name="food[]" value="Others" id="food4">Others(Describe the details in the following form.)</label>
+</dd>
+
+<dt>Content of Inquiry</dt>
+<dd><textarea cols="60" rows="5" name="message" placeholder="Describe the content of your inquiry." ></textarea></dd>
+</dl><!-- /.form-list -->
+</div><!-- /.form-list-wrapper -->
+
+    
+<div class="policy">
+<div class="policy-inner">
+<h3>Privacy Policy</h3>
+<p>Personal Information We May Collect
+"Personal Information" is information that identifies you as an individual, such as:
+・Name
+・User Name
+・Postal Adress(including billing and shopping addresses)
+・Telephone number (including home and mobile phone number )
+・Email address
+・Credit and debit card number
+・Profile picture
+・Social media account ID
+・Country of residence
+
+In some cases, we may use a third party payment service to process purchase and/or collect donations made through the Sites. In these cases, your Personal Information may be collected by this third party and not by us, will be subject to the third party's privacy policy rather than this Privacy Policy.
+We have no control over, and are not responsible for, this party's use or disclosure of your Personal Information.
+
+
+・・・・・・・・・・・・・・・・・
+
+How We May Collect Personal Information
+We and our service providers may collect Personal Information in a variety of ways, including:
+Through the Sites: (omitted)
+Offline: (omitted)
+Online tracking: (omitted)
+From Other Sources: (omitted)
+Mobile Usage: (omitted)
+
+To the extent permitted by appricable law, the Personal Information you provide through the Sites may be combined with Personal Information and Other Information that you provide to us (via online or offline means), that is publicly available, or that we may otherwise obtain online or offline, including, for example, from providers of demographic and other information, social media platforms and other third parties.
+
+
+・・・・・・・・・・・・・・・・・
+
+Cross-border transfer
+Your Personal Information may be stored in any country where we have facilities or service providers, and by using our Sites you consent to the transfer of information to our countries outside of your country of residence, including the United States, which may provide for different data protection rules than in your country.
+
+</p>   
+
+
+</div>
+</div><!-- /.policy -->
+
+<div class="policy-check">
+<label for="policy-check">
+<input type="checkbox" name="policy" id="policy-check" required>I confirmed and agree privacy policy.
+</label>
+</div>
+
+<div class="btn-wrapper">
+<input type="submit" value="Go to Confirmation Screen"><!-- valueの中の文字が表示させる -->
+<input type="reset" value="Reset">
+</div>
+
+</form>   
+
+
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+</body>
+</html>

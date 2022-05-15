@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 609.7 68.5" style="enable-background:new 0 0 609.7 68.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#0000FF;stroke-width:3;stroke-miterlimit:10;}
+	.st1{fill:none;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#0000FF;}
+	.st4{font-family:'ArialMT';}
+	.st5{font-size:14.9687px;}
+	.st6{font-family:'KozGoPr6N-Regular-90ms-RKSJ-H';}
+	.st7{font-size:18px;}
+	.st8{fill:#0000FF;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<polygon id="XMLID_27_" class="st0" points="596.7,235.2 410.2,235.2 422.7,201.4 410.2,167.7 596.7,167.7 609.2,201.4 "/>
+<polygon id="XMLID_8_" class="st1" points="239.5,-159.5 255.5,-159.5 255.5,-159.5 "/>
+<g id="XMLID_1_">
+	<polygon id="XMLID_44_" class="st2" points="2,66 2,2.5 185.1,2.5 196.9,34.3 185.1,66 	"/>
+	<path id="XMLID_41_" class="st3" d="M183.7,4.5l11,29.8l-11,29.8H4V4.5H183.7 M186.5,0.5H0V68h186.5L199,34.3L186.5,0.5L186.5,0.5z
+		"/>
+</g>
+<text transform="matrix(1.2025 0 0 1 43 21.8989)" class="st3 st4 st5">Step1</text>
+<text transform="matrix(1.2025 0 0 1 43 50.248)" class="st3 st6 st7">INPUT</text>
+<polygon id="XMLID_14_" class="st8" points="391.8,68 205.3,68 217.8,34.3 205.3,0.5 391.8,0.5 404.3,34.3 "/>
+<text transform="matrix(1.2025 0 0 1 232.8398 23.1196)" class="st2 st4 st5">Step2</text>
+<text transform="matrix(1.2025 0 0 1 228.0772 54.0459)" class="st2 st6 st7">CONFIRMATION</text>
+<polygon id="XMLID_18_" class="st8" points="596.7,68 410.2,68 422.7,34.3 410.2,0.5 596.7,0.5 609.2,34.3 "/>
+<text transform="matrix(1.2025 0 0 1 440.4162 21.8989)" class="st2 st4 st5">Step3</text>
+<text transform="matrix(1.2025 0 0 1 442.6972 52.4082)" class="st2 st6 st7">COMPLETION</text>
+<polygon id="XMLID_23_" class="st8" points="186.5,150.5 0,150.5 0,83 186.5,83 199,116.8 "/>
+<text transform="matrix(1.2025 0 0 1 43 104.3989)" class="st2 st4 st5">Step1</text>
+<text transform="matrix(1.2025 0 0 1 43 132.748)" class="st2 st6 st7">入力画面</text>
+<g id="XMLID_21_">
+	<polygon id="XMLID_49_" class="st2" points="207.4,149 219.4,116.8 207.4,84.5 390.7,84.5 402.7,116.8 390.7,149 	"/>
+	<path id="XMLID_46_" class="st3" d="M389.7,86l11.4,30.8l-11.4,30.8H209.6l11-29.7l0.4-1l-0.4-1l-11-29.7h180.1 M391.8,83H205.3
+		l12.5,33.8l-12.5,33.8h186.5l12.5-33.8L391.8,83L391.8,83z"/>
+</g>
+<text transform="matrix(1.2025 0 0 1 248.2515 104.3989)" class="st3 st4 st5">Step2</text>
+<text transform="matrix(1.2025 0 0 1 248.2515 132.748)" class="st3 st6 st7">確認画面</text>
+<text transform="matrix(1.2025 0 0 1 458.252 189.0659)" class="st3 st4 st5">Step3</text>
+<text transform="matrix(1.2025 0 0 1 458.252 189.0659)" class="st4 st5" style="fill:none;stroke:#0000FF;stroke-miterlimit:10;">Step3</text>
+<text transform="matrix(1.2025 0 0 1 458.252 217.415)" class="st3 st6 st7">完了画面</text>
+<text transform="matrix(1.2025 0 0 1 458.252 217.415)" class="st6 st7" style="fill:none;stroke:#0000FF;stroke-miterlimit:10;">完了画面</text>
+<polygon id="XMLID_19_" class="st8" points="596.7,150.5 410.2,150.5 422.7,116.8 410.2,83 596.7,83 609.2,116.8 "/>
+<text transform="matrix(1.2025 0 0 1 453.1699 104.3989)" class="st2 st4 st5">Step3</text>
+<text transform="matrix(1.2025 0 0 1 453.1699 132.748)" class="st2 st6 st7">完了画面</text>
+<polygon id="XMLID_31_" class="st8" points="186.5,235.2 0,235.2 0,167.7 186.5,167.7 199,201.4 "/>
+<text transform="matrix(1.2025 0 0 1 43 189.0659)" class="st2 st4 st5">Step1</text>
+<text transform="matrix(1.2025 0 0 1 43 217.4146)" class="st2 st6 st7">入力画面</text>
+<polygon id="XMLID_29_" class="st8" points="391.8,235.2 205.3,235.2 217.8,201.4 205.3,167.7 391.8,167.7 404.3,201.4 "/>
+<text transform="matrix(1.2025 0 0 1 248.2515 189.0659)" class="st2 st4 st5">Step2</text>
+<text transform="matrix(1.2025 0 0 1 248.2515 217.4146)" class="st2 st6 st7">確認画面</text>
+</svg>
